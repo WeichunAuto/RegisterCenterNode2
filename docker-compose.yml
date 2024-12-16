@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  api:
+    build: .
+    container_name: RegisterCenterNode2
+    ports:
+      - "8762:8762"
+    networks:
+      - artist-saas-net
+
+networks:
+  artist-saas-net:
+    driver: bridge
+    name: artist-saas-net
